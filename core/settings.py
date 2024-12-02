@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rustamdev',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -113,24 +115,19 @@ LANGUAGES = (
     ('ru', _('Russian'))
 )
 
-STATIC_ROOT = BASE_DIR / 'static'
-STATIC_URL = '/static/'
+STATIC_URL = '/static/'  # Statik fayllarning URL yo'li
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Yig'ilgan statik fayllar joylashadigan katalog
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-
+    BASE_DIR / "static",  # Rivojlanish davomida ishlatiladigan manba katalog
 ]
 
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
+MEDIA_URL = '/media/'  # Media fayllarning URL yo'li
+MEDIA_ROOT = BASE_DIR / 'media'  # Media fayllar saqlanadigan joy
 
 CSRF_TRUSTED_ORIGINS = [
     'https://rustamdev.uz',
-    # boshqa trusted domenlar ham bo'lishi mumkin
 ]
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
